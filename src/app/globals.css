@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ffffff;
+}
+/* styles/globals.css */
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 9999px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: #3b82f6;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  background-clip: content-box;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background-color: #2563eb;
+}
+
+/* antd pagination for table  */
+
+/* Change the color of the pagination items */
+.custom-pagination .ant-pagination-item {
+  color: #1f1f1f; /* Default item color */
+  transition: 0.3s ease-in-out all;
+}
+
+/* Change color of previous and next buttons */
+.custom-pagination .ant-pagination-prev,
+.custom-pagination .ant-pagination-next {
+  color: #1f1f1f;
+}
+
+/* Light #1F6306 background when hovering */
+.custom-pagination .ant-pagination-item:hover {
+  background-color: #f7f9fb;
+}
+
+/* Custom #1F6306 active item */
+.custom-pagination .ant-pagination-item-active {
+  background-color: #1f1f1f !important; /* Custom #1F6306 background */
+  border-color: #1f1f1f !important;
+  color: white !important; /* Apply white text color to active item */
+}
+
+/* Optional: For the active item when it's selected */
+.custom-pagination .ant-pagination-item-active a {
+  color: white !important; /* Ensure the text inside the anchor tag is white */
+}
+
+/* ant custom design in css  */
+:where(.css-dev-only-do-not-override-bp8v07).ant-form-item {
+  margin-bottom: 15px !important;
+}
+
+:where(.css-dev-only-do-not-override-bp8v07).ant-form-vertical
+  .ant-form-item:not(.ant-form-item-horizontal)
+  .ant-form-item-label,
+:where(.css-dev-only-do-not-override-bp8v07).ant-form-vertical
+  .ant-form-item:not(.ant-form-item-horizontal)
+  .ant-col-24.ant-form-item-label,
+:where(.css-dev-only-do-not-override-bp8v07).ant-form-vertical
+  .ant-form-item:not(.ant-form-item-horizontal)
+  .ant-col-xl-24.ant-form-item-label {
+  padding: 0 0 4px !important;
+}
+
+@media print {
+  .print.ant-modal {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    background: white !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .print .ant-modal-content {
+    box-shadow: none !important;
+    border: none !important;
+    background: white !important;
+    padding: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .print .ant-modal-body {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  .print .ant-modal-close {
+    display: none !important;
+  }
+  .ant-modal-mask {
+    display: none !important;
+  }
+    body * {
+    visibility: hidden !important;
+  }
+  .print,
+  .print * {
+    visibility: visible !important;
+  }
+  .print {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+  }
+}
+
